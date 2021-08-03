@@ -36,3 +36,6 @@ sysinfo.txt
 *.unitypackage
 Recipe App/.vsconfig
 Recipe App/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+Recipe App/Logs/AssetImportWorker0.log
+Recipe App/Logs/shadercompiler-AssetImportWorker0.log
+*.log
