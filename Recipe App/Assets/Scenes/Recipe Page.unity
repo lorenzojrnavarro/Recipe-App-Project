@@ -382,17 +382,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320837043}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 932870354}
-  m_RootOrder: 1
+  m_Father: {fileID: 595944571}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030041, y: 796}
-  m_SizeDelta: {x: 776.1649, y: 1034.8865}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.5081177, y: 75.400085}
+  m_SizeDelta: {x: -123.6563, y: -259.3766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320837045
 MonoBehaviour:
@@ -514,8 +514,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045507289}
   m_HandleRect: {fileID: 1045507288}
   m_Direction: 2
-  m_Value: 0.99999845
-  m_Size: 0.518166
+  m_Value: 0.9999996
+  m_Size: 0.20422195
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -590,7 +590,7 @@ RectTransform:
   - {fileID: 1888026236}
   - {fileID: 432505717}
   m_Father: {fileID: 932870354}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 583608586}
   - component: {fileID: 583608585}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DirectionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,19 +767,94 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Step 1\r\n\r\n    Preheat oven to 475\xB0F. Place a large pan filled with
-    1/2 inch water in oven.\r\n\nStep 2\r\n\r\n    Make crust: Mix graham cracker
-    crumbs and cinnamon; add butter or margarine. Press crust onto bottom and 2/3
-    of the way up a 9-inch springform pan lined with parchment. Wrap a large piece
-    of foil around bottom of pan. Freeze until filling is prepared.\r\n\nStep 3\r\n\r\n   
-    Make filling: Use an electric mixer to mix cream cheese, sugar, sour cream and
-    vanilla. Blend until smooth and creamy. Scrape down sides of bowl. Whisk eggs
-    in a bowl; add to cream cheese mixture. Blend just until eggs are incorporated.\r\n\nStep
-    4\r\n\r\n    Remove crust from freezer and pour in filling. Carefully place cheesecake
-    into preheated water bath. Bake for 12 minutes; turn oven to 350\xB0F and bake
-    until top of cheesecake turns golden, 50 to 60 minutes. Remove cake to a wire
-    rack to cool.\r\n\nStep 5\r\n\r\n    Make topping: Combine sour cream and sugar;
-    spread over cake. Cover and refrigerate at least 4 hours.\r"
+  m_text: '
+
+    The standard Lorem Ipsum passage, used since the 1500s
+
+
+
+    "Lorem
+    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum."
+
+    Section 1.10.32 of "de Finibus Bonorum et Malorum",
+    written by Cicero in 45 BC
+
+
+
+    "Sed ut perspiciatis unde omnis iste natus
+    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+    aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+    dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit
+    esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+    nulla pariatur?"
+
+    1914 translation by H. Rackham
+
+
+
+    "But I must explain
+    to you how all this mistaken idea of denouncing pleasure and praising pain was
+    born and I will give you a complete account of the system, and expound the actual
+    teachings of the great explorer of the truth, the master-builder of human happiness.
+    No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,
+    but because those who do not know how to pursue pleasure rationally encounter
+    consequences that are extremely painful. Nor again is there anyone who loves
+    or pursues or desires to obtain pain of itself, because it is pain, but because
+    occasionally circumstances occur in which toil and pain can procure him some
+    great pleasure. To take a trivial example, which of us ever undertakes laborious
+    physical exercise, except to obtain some advantage from it? But who has any right
+    to find fault with a man who chooses to enjoy a pleasure that has no annoying
+    consequences, or one who avoids a pain that produces no resultant pleasure?"
+
+    Section
+    1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+
+
+
+    "At
+    vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+    occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+    mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
+    est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+    optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+    omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam
+    et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+    repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+    a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
+    aut perferendis doloribus asperiores repellat."
+
+    1914 translation by H. Rackham
+
+
+
+    "On
+    the other hand, we denounce with righteous indignation and dislike men who are
+    so beguiled and demoralized by the charms of pleasure of the moment, so blinded
+    by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+    and equal blame belongs to those who fail in their duty through weakness of will,
+    which is the same as saying through shrinking from toil and pain. These cases
+    are perfectly simple and easy to distinguish. In a free hour, when our power
+    of choice is untrammelled and when nothing prevents our being able to do what
+    we like best, every pleasure is to be welcomed and every pain avoided. But in
+    certain circumstances and owing to the claims of duty or the obligations of business
+    it will frequently occur that pleasures have to be repudiated and annoyances
+    accepted. The wise man therefore always holds in these matters to this principle
+    of selection: he rejects pleasures to secure other greater pleasures, or else
+    he endures pains to avoid worse pains."
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -855,6 +930,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583608583}
+  m_CullTransparentMesh: 1
+--- !u!1 &595944570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595944571}
+  - component: {fileID: 595944573}
+  - component: {fileID: 595944572}
+  m_Layer: 5
+  m_Name: PolaroidContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &595944571
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595944570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 320837044}
+  - {fileID: 753220776}
+  - {fileID: 1763078152}
+  m_Father: {fileID: 932870354}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.019714, y: -673.69}
+  m_SizeDelta: {x: 1055.5454, y: 1055.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &595944572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595944570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fbaadac5dccfe1043bdb5935fae1d5fd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &595944573
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595944570}
   m_CullTransparentMesh: 1
 --- !u!1 &603149347
 GameObject:
@@ -963,11 +1116,11 @@ RectTransform:
   - {fileID: 258586196}
   - {fileID: 1874417597}
   m_Father: {fileID: 932870354}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 49.5, y: 780}
+  m_AnchoredPosition: {x: 49.5, y: 885}
   m_SizeDelta: {x: -99, y: 600}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &670395309
@@ -1098,7 +1251,7 @@ GameObject:
   - component: {fileID: 753220778}
   - component: {fileID: 753220777}
   m_Layer: 5
-  m_Name: RecipeTitle
+  m_Name: RecipeTitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,18 +1264,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753220775}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 932870354}
-  m_RootOrder: 2
+  m_Father: {fileID: 595944571}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46}
-  m_SizeDelta: {x: 0, y: 249.7427}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_SizeDelta: {x: 0, y: 163.4805}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &753220777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,15 +1323,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 128
+  m_fontSize: 72
   m_fontSizeBase: 128
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 2048
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1232,6 +1385,7 @@ GameObject:
   - component: {fileID: 932870353}
   - component: {fileID: 932870352}
   - component: {fileID: 932870351}
+  - component: {fileID: 932870355}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1312,12 +1466,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 508440804}
-  - {fileID: 320837044}
-  - {fileID: 753220776}
   - {fileID: 670395308}
   - {fileID: 450111942}
   - {fileID: 1236029613}
   - {fileID: 1436619733}
+  - {fileID: 595944571}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1326,6 +1479,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &932870355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932870350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a2817a849427546a77cbacb67446a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 753220777}
+  ingredientsText: {fileID: 1233961723}
+  directionsText: {fileID: 583608585}
 --- !u!1 &1045507287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1581,7 @@ GameObject:
   - component: {fileID: 1233961724}
   - component: {fileID: 1233961723}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: IngredientsListText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1458,11 +1626,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Crust:\r\n    1\u2009\xBD cups graham cracker crumbs\r\n    \xBC teaspoon
-    ground cinnamon\r\n    \u2153 cup unsalted butter or margarine, melted\r\nFILLING:\r\n   
-    4 (8 oz.) packages cream cheese, softened\r\n    1\u2009\xBC cups sugar\r\n   
-    \xBD cup sour cream\r\n    2 teaspoons vanilla extract\r\n    5 large eggs\r\nTOPPING:\r\n   
-    \xBD cup sour cream\r\n    2 teaspoons sugar\r\n"
+  m_text: "\r\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n   
+    Nam eu nibh imperdiet, vehicula leo nec, iaculis neque.\r\n\r\n    Mauris sit
+    amet nibh a erat dictum dictum.\r\n    Aliquam dictum est in lectus viverra,
+    sit amet elementum eros consectetur.\r\n    Sed eget metus varius, molestie ex
+    id, tempor nisi.\r\n    Sed sollicitudin quam nec tellus malesuada aliquet.\r\n\r\n   
+    Nunc commodo leo in ante efficitur, sed vulputate magna blandit.\r\n    Morbi
+    et turpis vel lectus auctor fringilla.\r\n    Morbi tristique quam a mauris cursus,
+    a ultrices ligula blandit.\r\n    In condimentum sapien ut auctor molestie.\r\n   
+    Proin accumsan lectus nec urna accumsan, sed congue nisl tincidunt.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1569,11 +1741,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 932870354}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -564, y: -53.871}
+  m_AnchoredPosition: {x: -555, y: 57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236029614
@@ -1739,7 +1911,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 932870354}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1842,6 +2014,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436619732}
+  m_CullTransparentMesh: 1
+--- !u!1 &1763078151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763078152}
+  - component: {fileID: 1763078154}
+  - component: {fileID: 1763078153}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1763078152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763078151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 595944571}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -366, y: 473}
+  m_SizeDelta: {x: 133.1934, y: 201.9512}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1763078153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763078151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d0690f0e4d67d1e429ab98266b7f6154, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1763078154
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763078151}
   m_CullTransparentMesh: 1
 --- !u!1 &1765986497
 GameObject:
