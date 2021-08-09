@@ -281,6 +281,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1818287897}
     m_Modifications:
+    - target: {fileID: 1782988809, guid: fff70836553c9ba4781159362cf7a357, type: 3}
+      propertyPath: recipeNames.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782988809, guid: fff70836553c9ba4781159362cf7a357, type: 3}
+      propertyPath: recipeNames.Array.data[2]
+      value: Tomato Soup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782988809, guid: fff70836553c9ba4781159362cf7a357, type: 3}
+      propertyPath: recipeNames.Array.data[3]
+      value: Lasagna
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782988809, guid: fff70836553c9ba4781159362cf7a357, type: 3}
+      propertyPath: recipeNames.Array.data[4]
+      value: Brownies
+      objectReference: {fileID: 0}
     - target: {fileID: 604710638881083306, guid: fff70836553c9ba4781159362cf7a357, type: 3}
       propertyPath: m_fontSize
       value: 50
