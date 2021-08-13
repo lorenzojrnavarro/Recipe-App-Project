@@ -5697,7 +5697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5706,18 +5706,18 @@ PrefabInstance:
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6681973041225500631}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: goFav
+      value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainToFav, Assembly-CSharp
+      value: SceneChanger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5733,6 +5733,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+--- !u!114 &6681973041225500631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7302251844326096042, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+  m_PrefabInstance: {fileID: 6681973041225500630}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2593e32a6b0f951489784efa02c7ab00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6810179781152262362 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 160367592506871564, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
