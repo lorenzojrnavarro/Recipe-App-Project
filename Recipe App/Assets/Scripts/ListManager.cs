@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class ListManager : MonoBehaviour
 {
@@ -16,11 +17,23 @@ public class ListManager : MonoBehaviour
 
     private InputField[] addIn;
 
+    public class ListItem
+    {
+        public string ingName;
+        public int index;
+
+        public ListItem(string name, int index)
+        {
+            this.ingName = name;
+            this.index = index;
+        }
+    }
+
     private void Start()
     {
         filePath = Application.persistentDataPath + "/ingredient.txt";
+        LoadJSONData();
         addIn = AddScreen.GetComponentsInChildren<InputField>();
-
         inputDone.onClick.AddListener(delegate { CreateIngList(addIn[0].text); });
     }
 
@@ -37,26 +50,63 @@ public class ListManager : MonoBehaviour
         }
     }
 
-    void CreateIngList(string name)
+    void CreateIngList(string name, int loadIndex = 0, bool loading = false)
     {
         GameObject ing = Instantiate(ListPrefab);
         ing.transform.SetParent(content);
         ListIngredient ingObject = ing.GetComponent<ListIngredient>();
-        int index = 0;
-        if(listIng.Count > 0)
-            index = listIng.Count - 1;
+        int index = loadIndex;
+        if (!loading)
+            index = listIng.Count;
         ingObject.SetObjectInfo(name, index);
         listIng.Add(ingObject);
         ListIngredient temp = ingObject;
         ingObject.GetComponent<Toggle>().onValueChanged.AddListener(delegate { IngCheck(temp); });
-
-        SwitchMode(0);
+        if (!loading)
+        {
+            SaveJSONData();
+            SwitchMode(0);
+        }
     }
 
     void IngCheck(ListIngredient ing)
     {
         listIng.Remove(ing);
+        SaveJSONData();
         Destroy(ing.gameObject);
     }
 
+    void SaveJSONData()
+    {
+        string contents = "";
+
+        for(int i = 0; i<listIng.Count; i++)
+        {
+            ListItem temp = new ListItem(listIng[i].ingName, listIng[i].index);
+            contents += JsonUtility.ToJson(temp) + "\n";
+        }
+        File.WriteAllText(filePath, contents);
+    }
+
+    void LoadJSONData()
+    {
+        if(File.Exists(filePath))
+        {
+            string contents = File.ReadAllText(filePath);
+
+            string[] splitContents = contents.Split('\n');
+
+            foreach(string content in splitContents)
+            {
+                if(content.Trim() != "") {
+                    ListItem temp = JsonUtility.FromJson<ListItem>(content.Trim());
+                    CreateIngList(temp.ingName, temp.index, true);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No file");
+        }
+    }
 }
