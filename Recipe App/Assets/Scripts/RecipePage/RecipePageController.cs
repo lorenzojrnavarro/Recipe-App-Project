@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class RecipePageController : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
+    public TextMeshProUGUI caloriesText;
     public TextMeshProUGUI ingredientsText;
     public TextMeshProUGUI directionsText;
     public RawImage foodImage;
@@ -26,12 +27,13 @@ public class RecipePageController : MonoBehaviour
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
 
-            Recipe[] recipes = JsonConvert.DeserializeObject<Recipe[]>(responseBody);
-            nameText.text = recipes[0].Name;
-            ingredientsText.text = string.Join("<br>", recipes[0].Ingredients);
-            directionsText.text = string.Join("<br><br>", recipes[0].Directions);
+            Recipe recipes = JsonConvert.DeserializeObject<Recipe>(responseBody);
+            nameText.text = recipes.Name;
+            caloriesText.text = "Calories: " + recipes.Calories;
+            ingredientsText.text = recipes.Ingredients;
+            directionsText.text = recipes.Instructions;
 
-            StartCoroutine(LoadImage(foodImage, recipes[0].ImageURI));
+            StartCoroutine(LoadImage(foodImage, recipes.ImageURL));
         }
         catch(Exception e)
         {

@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 
-public class UploadImage : MonoBehaviour
+public class UploadToAWS3 : MonoBehaviour
 {
     private const string awsBucketName = "morgothscookbookbucket";
     private const string awsAccessKey = "AKIAUTMAXTBVPHNVOVGE";

@@ -896,8 +896,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 300055537}
-        m_TargetAssemblyTypeName: goBack, Assembly-CSharp
-        m_MethodName: backToMain
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -980,9 +980,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 300055531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf394578f20541647aca422da92f01f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2593e32a6b0f951489784efa02c7ab00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredScene: Main Page
 --- !u!1 &371406674
 GameObject:
   m_ObjectHideFlags: 0

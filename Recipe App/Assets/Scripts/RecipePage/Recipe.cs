@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Recipe
+public class Recipe : ISearchable
 {
     [JsonProperty]
-    public string Name { get; private set; }
+    public string Name { get; set; }
+    
+    [JsonProperty]
+    public string Calories { get; /*private*/ set; }
 
     [JsonProperty]
-    public string ImageURI { get; private set; }
+    public string ImageURL { get; /*private*/ set; }
 
     [JsonProperty]
-    public string[] Ingredients { get; private set; }
+    public string Ingredients { get; private set; }
 
     [JsonProperty]
-    public string[] Directions { get; private set; }
+    public string Instructions { get; private set; }
 }
