@@ -12,4 +12,14 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(desiredScene);
     }
+
+    public void AddScene()
+    {
+        SceneManager.LoadScene(desiredScene, LoadSceneMode.Additive);
+    }
+
+    public static void AddScene(string desiredScene)
+    {
+        SceneManager.LoadScene(desiredScene, LoadSceneMode.Additive);
+    }
 }

@@ -6,6 +6,9 @@ using UnityEngine;
 public class Recipe : ISearchable
 {
     [JsonProperty]
+    public int ID { get; private set; }
+
+    [JsonProperty]
     public string Name { get; set; }
     
     [JsonProperty]

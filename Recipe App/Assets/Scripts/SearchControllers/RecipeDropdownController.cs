@@ -2,33 +2,24 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using UnityEngine;
 
 public class RecipeDropdownController : SearchableDropdownController<Recipe>
 {
-    protected override async void Awake()
+    protected override void Awake()
     {
         base.Awake();
+    }
 
-        HttpClient client = new HttpClient();
+    protected override void UpdateOptions(string text)
+    {
+        Dictionary<string, string> param = new Dictionary<string, string>();
+        param.Add("recipeName", text);        
 
-        try
-        {
-            HttpResponseMessage response = await client.GetAsync("http://localhost:4444/");
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
+        completeOptionsList = ApiCommunicator.MakeRequest<Recipe[]>("recipeSearch", param).ToList();
 
-            Recipe recipes = JsonConvert.DeserializeObject<Recipe>(responseBody);
-
-            SetSearchableList(new List<Recipe>() { recipes });
-        }
-        catch (Exception e)
-        {
-            Debug.LogError(e.Message);
-        }
-
-
-        client.Dispose();
-    }    
+        base.UpdateOptions(text);
+    }
 }

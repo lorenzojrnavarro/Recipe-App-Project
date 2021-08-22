@@ -9,14 +9,14 @@ using UnityEngine;
 [RequireComponent(typeof(TMP_InputField))]
 public class SearchableDropdownController<T> : MonoBehaviour where T : ISearchable
 {
-    //public Action<SearchableDropdownController> ValueSelected;
-    public Action SearchModified; 
+    public Action<T> ValueSelected;
+    public Action SearchModified;
 
     [HideInInspector] public TMP_InputField inputField;
     [HideInInspector] public NonBlockingDropdown<T> dropdown;
 
-    private List<T> completeOptionsList;
-    private List<T> searchingList;
+    protected List<T> completeOptionsList;
+    protected List<T> searchingList;
 
     protected virtual void Awake()
     {
@@ -25,8 +25,6 @@ public class SearchableDropdownController<T> : MonoBehaviour where T : ISearchab
 
         inputField.onValueChanged.AddListener(UpdateOptions);
         dropdown.onValueChanged.AddListener(UpdateInputFieldText);
-
-        //SetSearchableList(new List<string>() { "Cheesecake", "Spaghetti", "Coffee", "Cum" });
     }
 
     private void RefreshOptions()
@@ -38,20 +36,6 @@ public class SearchableDropdownController<T> : MonoBehaviour where T : ISearchab
         dropdown.AddOptions(searchingList.Select(x => x.Name).ToList());
         dropdown.RefreshShownValue();
     }
-
-    //public void SetSearchableList(List<string> listItems)
-    //{
-    //    for (int i = 0; i < listItems.Count; i++)
-    //    {
-    //        listItems[i] = Regex.Replace(listItems[i], "(\\B[A-Z])", " $1");
-    //    }
-
-    //    completeOptionsList = listItems;
-    //    searchingList = listItems;
-
-    //    RefreshOptions();
-    //}
-        
 
     public void SetSearchableList(List<T> listItems)
     {
@@ -65,10 +49,10 @@ public class SearchableDropdownController<T> : MonoBehaviour where T : ISearchab
     {
         yield return null;
 
-        dropdown.PopulateCustomDropdown(listItems.ToArray());
+        dropdown.PopulateCustomDropdown(listItems.ToArray());        
     }
 
-    private void UpdateOptions(string text)
+    protected virtual void UpdateOptions(string text)
     {
         searchingList = completeOptionsList.FindAll((x) => Regex.IsMatch(x.Name, Regex.Escape(text), RegexOptions.IgnoreCase));
 
@@ -89,7 +73,7 @@ public class SearchableDropdownController<T> : MonoBehaviour where T : ISearchab
         inputField.SetTextWithoutNotify(searchingList[index].Name);
         dropdown.SetValueWithoutNotify(index);
 
-        //ValueSelected?.Invoke(this);
+        ValueSelected?.Invoke(searchingList[index]);
     }
 
     public string GetValue()

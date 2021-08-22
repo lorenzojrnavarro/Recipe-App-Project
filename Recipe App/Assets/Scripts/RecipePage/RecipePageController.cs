@@ -17,30 +17,29 @@ public class RecipePageController : MonoBehaviour
     public TextMeshProUGUI directionsText;
     public RawImage foodImage;
 
+    private Recipe recipe;
+
     private async void Awake()
     {
-        HttpClient client = new HttpClient();
+        recipe = GameObject.FindObjectOfType<MainPageController>().selectedRecipe;
 
         try
         {
-            HttpResponseMessage response = await client.GetAsync("http://localhost:4444/");
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
+            Dictionary<string, string> param = new Dictionary<string, string>();
+            param.Add("recipeID", recipe.ID.ToString());
+            recipe = ApiCommunicator.MakeRequest<Recipe>("recipe", param);
+                        
+            nameText.text = recipe.Name;
+            caloriesText.text = "Calories: " + recipe.Calories;
+            ingredientsText.text = recipe.Ingredients.Replace("@", "<br>");
+            directionsText.text = recipe.Instructions;
 
-            Recipe recipes = JsonConvert.DeserializeObject<Recipe>(responseBody);
-            nameText.text = recipes.Name;
-            caloriesText.text = "Calories: " + recipes.Calories;
-            ingredientsText.text = recipes.Ingredients;
-            directionsText.text = recipes.Instructions;
-
-            StartCoroutine(LoadImage(foodImage, recipes.ImageURL));
+            StartCoroutine(LoadImage(foodImage, recipe.ImageURL));
         }
         catch(Exception e)
         {
             Debug.LogError(e.Message);
         }
-
-        client.Dispose();
     }
 
     private IEnumerator LoadImage(RawImage image, string imageURL)
