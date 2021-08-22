@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemListController : MonoBehaviour
@@ -10,10 +11,12 @@ public class ItemListController : MonoBehaviour
     [SerializeField]
     private Transform contentTransform;
 
+    private List<ColumnListItem> listItems;
     private AddListItem addListItem;
 
     private void Awake()
     {
+        listItems = new List<ColumnListItem>();
         addListItem = GetComponentInChildren<AddListItem>();
         addListItem.OnAddButtonClicked += AddButtonClicked;
     }
@@ -26,10 +29,17 @@ public class ItemListController : MonoBehaviour
         listItem.Populate(columns);
 
         addListItem.transform.SetAsLastSibling();
+        listItems.Add(listItem);
     }
 
     private void DeleteButtonClicked(ColumnListItem listItem)
     {
+        listItems.Remove(listItem);
         Destroy(listItem.gameObject);
+    }
+
+    public List<string> GetValues()
+    {
+        return listItems.Select(x => x.GetValue()).ToList();
     }
 }

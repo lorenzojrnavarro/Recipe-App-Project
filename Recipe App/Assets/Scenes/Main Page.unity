@@ -5903,7 +5903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7302251844326096042, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: desiredScene
-      value: 
+      value: Favorites Page
       objectReference: {fileID: 0}
     - target: {fileID: 8092553811963290571, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_Name

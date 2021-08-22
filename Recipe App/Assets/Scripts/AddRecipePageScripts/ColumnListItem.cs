@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using System;
+using System.Text;
 
 public class ColumnListItem : MonoBehaviour
 {
@@ -26,5 +27,18 @@ public class ColumnListItem : MonoBehaviour
     public void DeleteButtonClicked()
     {
         OnDeleteButtonClicked.Invoke(this);
+    }
+
+    public string GetValue()
+    {
+        StringBuilder value = new StringBuilder();
+
+        for (int i = 0; i < columnTexts.Length; i++)
+        {
+            value.Append(columnTexts[i].text);
+            value.Append("&");
+        }
+
+        return value.ToString();
     }
 }

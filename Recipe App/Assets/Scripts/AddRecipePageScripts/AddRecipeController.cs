@@ -6,25 +6,34 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using TMPro;
+using System.Linq;
 
 public class AddRecipeController : MonoBehaviour
 {
     [SerializeField]
     private RawImage buttonImage;
 
-    public TMPro.TextMeshProUGUI bullshit;
+    [SerializeField]
+    private TMP_InputField recipeName;
+
+    [SerializeField]
+    private ItemListController recipeIngredients;
+
+    [SerializeField]
+    private ItemListController recipeAllergens;
+
+    [SerializeField]
+    private ItemListController recipeProcedure;
+
+    [SerializeField]
+    private TMP_InputField recipeCalories;
 
     private string imageFilePath;
 
     private void Awake()
     {
-        //byte[] bytes = File.ReadAllBytes(@"F:\\Pictures\\Perter.png");
-        //Dictionary<string, string> param = new Dictionary<string, string>();
 
-        //param.Add("recipeImageBytes", Convert.ToBase64String(bytes));
-        //param.Add("recipeImageName", "Perter");
-
-        //ApiCommunicator.MakePut("recipeUpload", param);
     }
 
     public void SelectPhotoToUpload()
@@ -39,20 +48,30 @@ public class AddRecipeController : MonoBehaviour
     }
 
     private IEnumerator LoadImageLocally(RawImage image, string imagePath)
-    {
-        //UnityWebRequest unityWebRequest = UnityWebRequest.Get(imageFilePath);
-        //yield return unityWebRequest.SendWebRequest();
-
-        //image.texture = DownloadHandlerTexture.GetContent(unityWebRequest) as Texture2D;
-
+    {     
         #if (UNITY_ANDROID || UNITY_IOS)
             imagePath = "file://" + imageFilePath;
         #endif
 
-        bullshit.text = imageFilePath;
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(imagePath);
         yield return request.SendWebRequest();
         Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
         image.texture = texture;
+    }
+
+    public void AcceptButtonClicked()
+    {
+        byte[] bytes = File.ReadAllBytes(@"F:\\Pictures\\Perter.png");
+        Dictionary<string, string> param = new Dictionary<string, string>();
+
+        
+        param.Add("recipeName", recipeName.text);
+        param.Add("recipeImageBytes", Convert.ToBase64String(bytes));
+        param.Add("recipeIngredients", string.Join("@", recipeIngredients.GetValues()));
+        param.Add("recipeAllergens", string.Join(",", recipeAllergens.GetValues()));
+        param.Add("recipeProcedure", string.Join("<br><br>", recipeProcedure.GetValues()));
+        param.Add("recipeCalories", recipeCalories.text);
+
+        ApiCommunicator.MakePut("recipeUpload", param);
     }
 }
