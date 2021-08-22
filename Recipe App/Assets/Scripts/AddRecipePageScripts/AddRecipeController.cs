@@ -12,6 +12,8 @@ public class AddRecipeController : MonoBehaviour
     [SerializeField]
     private RawImage buttonImage;
 
+    public TMPro.TextMeshProUGUI bullshit;
+
     private string imageFilePath;
 
     private void Awake()
@@ -43,6 +45,11 @@ public class AddRecipeController : MonoBehaviour
 
         //image.texture = DownloadHandlerTexture.GetContent(unityWebRequest) as Texture2D;
 
+        #if (UNITY_ANDROID || UNITY_IOS)
+            imagePath = "file://" + imageFilePath;
+        #endif
+
+        bullshit.text = imageFilePath;
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(imagePath);
         yield return request.SendWebRequest();
         Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
