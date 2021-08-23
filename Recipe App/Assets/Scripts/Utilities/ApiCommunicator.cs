@@ -8,7 +8,9 @@ using UnityEngine;
 
 public static class ApiCommunicator
 {
-    private static string ApiBaseUri = "http://localhost:4444/";
+    //private static string ApiBaseUri = "http://76.175.108.117:25565/";
+    private static string ApiBaseUri = "http://localhost:25565/";
+
     public static T MakeRequest<T>(string route, Dictionary<string, string> postParams = null)
     {
         using (var client = new HttpClient())

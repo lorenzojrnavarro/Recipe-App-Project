@@ -11,6 +11,9 @@ using UnityEngine.UI;
 
 public class RecipePageController : MonoBehaviour
 {
+    [SerializeField]
+    private Toggle favoriteToggle;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI caloriesText;
     public TextMeshProUGUI ingredientsText;
@@ -31,10 +34,16 @@ public class RecipePageController : MonoBehaviour
                         
             nameText.text = recipe.Name;
             caloriesText.text = "Calories: " + recipe.Calories;
-            ingredientsText.text = recipe.Ingredients.Replace("@", "<br>");
+            ingredientsText.text = recipe.Ingredients.Replace("@", "<br>").Replace('&', ' ');
             directionsText.text = recipe.Instructions;
 
             StartCoroutine(LoadImage(foodImage, recipe.ImageURL));
+
+            if (PlayerPrefs.HasKey("favorites"))
+            {
+                List<int> favorites = JsonConvert.DeserializeObject<List<int>>(PlayerPrefs.GetString("favorites"));
+                favoriteToggle.SetIsOnWithoutNotify(favorites.Contains(recipe.ID));
+            }            
         }
         catch(Exception e)
         {
@@ -48,5 +57,18 @@ public class RecipePageController : MonoBehaviour
         yield return request.SendWebRequest();
         Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
         image.texture = texture;
+    }
+
+    public void AddToFavorites(bool addToFavorites)
+    {
+        if (!PlayerPrefs.HasKey("favorites")) PlayerPrefs.SetString("favorites", "[]");
+
+        List<int> favorites = JsonConvert.DeserializeObject<List<int>>(PlayerPrefs.GetString("favorites"));
+
+        if (addToFavorites) favorites.Add(recipe.ID);
+        else favorites.Remove(recipe.ID);
+        
+        PlayerPrefs.SetString("favorites", JsonConvert.SerializeObject(favorites));
+        PlayerPrefs.Save();
     }
 }

@@ -61,15 +61,14 @@ public class AddRecipeController : MonoBehaviour
 
     public void AcceptButtonClicked()
     {
-        byte[] bytes = File.ReadAllBytes(@"F:\\Pictures\\Perter.png");
+        byte[] bytes = File.ReadAllBytes(imageFilePath);
         Dictionary<string, string> param = new Dictionary<string, string>();
-
         
         param.Add("recipeName", recipeName.text);
         param.Add("recipeImageBytes", Convert.ToBase64String(bytes));
         param.Add("recipeIngredients", string.Join("@", recipeIngredients.GetValues()));
-        param.Add("recipeAllergens", string.Join(",", recipeAllergens.GetValues()));
-        param.Add("recipeProcedure", string.Join("<br><br>", recipeProcedure.GetValues()));
+        param.Add("recipeAllergens", string.Join(",", recipeAllergens.GetValues()).Replace("&", ""));
+        param.Add("recipeProcedure", string.Join("<br><br>", recipeProcedure.GetValues()).Replace("&", ""));
         param.Add("recipeCalories", recipeCalories.text);
 
         ApiCommunicator.MakePut("recipeUpload", param);
