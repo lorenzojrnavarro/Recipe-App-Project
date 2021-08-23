@@ -24,7 +24,7 @@ public class RecipePageController : MonoBehaviour
 
     private async void Awake()
     {
-        recipe = GameObject.FindObjectOfType<MainPageController>().selectedRecipe;
+        recipe = RecipeManager.CurrentRecipe;
 
         try
         {

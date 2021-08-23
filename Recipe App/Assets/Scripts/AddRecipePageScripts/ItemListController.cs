@@ -14,7 +14,7 @@ public class ItemListController : MonoBehaviour
     private List<ColumnListItem> listItems;
     private AddListItem addListItem;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         listItems = new List<ColumnListItem>();
         addListItem = GetComponentInChildren<AddListItem>();
@@ -32,7 +32,7 @@ public class ItemListController : MonoBehaviour
         listItems.Add(listItem);
     }
 
-    private void DeleteButtonClicked(ColumnListItem listItem)
+    protected virtual void DeleteButtonClicked(ColumnListItem listItem)
     {
         listItems.Remove(listItem);
         Destroy(listItem.gameObject);

@@ -23,7 +23,8 @@ public class NonBlockingDropdown<T> : TMP_Dropdown
         for (int i = 0; i < data.Length; i++)
         {
             customDropdownItems[i].Populate(data[i]);
-            customDropdownItems[i].ItemClicked += OnClick;
+
+            if(i == 0) customDropdownItems[i].ItemClicked += OnClick;
         }
     }
 

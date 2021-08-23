@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class MainPageController : MonoBehaviour
 {
-    public Recipe selectedRecipe;
-
     [SerializeField]
     private RecipeDropdownController recipeDropdownController;    
 
@@ -17,7 +15,13 @@ public class MainPageController : MonoBehaviour
 
     private void OnRecipeSelected(Recipe recipe)
     {
-        selectedRecipe = recipe;
+        RecipeManager.CurrentRecipe = recipe;
+        SceneChanger.AddScene("Recipe Page");
+    }
+
+    public void OnRandomRecipeButtonSelected()
+    {
+        RecipeManager.CurrentRecipe = ApiCommunicator.MakeRequest<Recipe>("recipeRandom");
         SceneChanger.AddScene("Recipe Page");
     }
 }

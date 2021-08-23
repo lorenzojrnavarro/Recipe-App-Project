@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26, y: 2.5641}
-  m_SizeDelta: {x: -23, y: 13.5909}
+  m_AnchoredPosition: {x: 49.83539, y: 35.93347}
+  m_SizeDelta: {x: 24.6707, y: -53.1482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120735666
 MonoBehaviour:
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Beef
+  m_text: Dairy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -592,10 +592,10 @@ RectTransform:
   m_Father: {fileID: 781145593}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -470}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207035039
 MonoBehaviour:
@@ -663,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &265809312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 245.36, y: 399}
+  m_AnchoredPosition: {x: -267.64, y: -430}
   m_SizeDelta: {x: 735.2897, y: 709.9846}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &265809313
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 371116462}
   - component: {fileID: 371116463}
   m_Layer: 5
-  m_Name: DairyButton
+  m_Name: SesameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,12 +841,12 @@ RectTransform:
   - {fileID: 1491563}
   - {fileID: 1044655700}
   m_Father: {fileID: 781145593}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -310}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &371116463
 MonoBehaviour:
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 405530557}
   - component: {fileID: 405530558}
   m_Layer: 5
-  m_Name: Gluten
+  m_Name: GlutenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1181,12 +1181,12 @@ RectTransform:
   - {fileID: 394694268}
   - {fileID: 569667415}
   m_Father: {fileID: 781145593}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -470}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405530558
 MonoBehaviour:
@@ -1340,8 +1340,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 513, y: 828.5}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &545945416
 GameObject:
@@ -1548,6 +1548,34 @@ PrefabInstance:
     - target: {fileID: 4420184040990551009, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_margin.z
       value: 19.779587
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 742795157}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRandomRecipeButtonSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainPageController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875586979308853408, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8092553811963290571, guid: 44e38f505a5e2924490d6e37f094c261, type: 3}
       propertyPath: m_Name
@@ -2478,7 +2506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513, y: 829}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760909713
@@ -2741,12 +2769,12 @@ RectTransform:
   - {fileID: 1845409335}
   - {fileID: 1527382595}
   - {fileID: 2090739406}
+  - {fileID: 405530557}
   - {fileID: 1410188792}
   - {fileID: 371116462}
-  - {fileID: 932209176}
   - {fileID: 1845948235}
+  - {fileID: 932209176}
   - {fileID: 1823827931}
-  - {fileID: 405530557}
   - {fileID: 207035038}
   m_Father: {fileID: 265809312}
   m_RootOrder: 1
@@ -2814,8 +2842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26, y: 2.564087}
-  m_SizeDelta: {x: -23, y: 13.5909}
+  m_AnchoredPosition: {x: 69.184875, y: 2.564087}
+  m_SizeDelta: {x: 63.3697, y: 13.5909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822067998
 MonoBehaviour:
@@ -2837,7 +2865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Egg
+  m_text: Shellfish
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3020,12 +3048,12 @@ RectTransform:
   - {fileID: 1086183396}
   - {fileID: 1854413398}
   m_Father: {fileID: 781145593}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -310}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932209177
 MonoBehaviour:
@@ -3264,8 +3292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 48.562622, y: 2.564087}
-  m_SizeDelta: {x: 22.1252, y: 13.5909}
+  m_AnchoredPosition: {x: 59.73877, y: 2.564087}
+  m_SizeDelta: {x: 44.4774, y: 13.5909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044655701
 MonoBehaviour:
@@ -3287,9 +3315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dairy
-
-'
+  m_text: Sesame
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3499,7 +3525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Seafood
+  m_text: Peanut
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3633,7 +3659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chicken
+  m_text: Fish
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3904,7 +3930,7 @@ GameObject:
   - component: {fileID: 1410188792}
   - component: {fileID: 1410188793}
   m_Layer: 5
-  m_Name: SeafoodButton
+  m_Name: PeanutButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3924,12 +3950,12 @@ RectTransform:
   - {fileID: 732975998}
   - {fileID: 1165784967}
   m_Father: {fileID: 781145593}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -230}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410188793
 MonoBehaviour:
@@ -3990,7 +4016,7 @@ GameObject:
   - component: {fileID: 1527382595}
   - component: {fileID: 1527382596}
   m_Layer: 5
-  m_Name: PorkButton
+  m_Name: EggButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4012,10 +4038,10 @@ RectTransform:
   m_Father: {fileID: 781145593}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -150}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1527382596
 MonoBehaviour:
@@ -4791,12 +4817,12 @@ RectTransform:
   - {fileID: 592742393}
   - {fileID: 2019486068}
   m_Father: {fileID: 781145593}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -390}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823827932
 MonoBehaviour:
@@ -4857,7 +4883,7 @@ GameObject:
   - component: {fileID: 1845409335}
   - component: {fileID: 1845409336}
   m_Layer: 5
-  m_Name: BeefButton
+  m_Name: DairyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4879,10 +4905,10 @@ RectTransform:
   m_Father: {fileID: 781145593}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -150}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845409336
 MonoBehaviour:
@@ -4943,7 +4969,7 @@ GameObject:
   - component: {fileID: 1845948235}
   - component: {fileID: 1845948236}
   m_Layer: 5
-  m_Name: EggButton
+  m_Name: ShellfishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4965,10 +4991,10 @@ RectTransform:
   m_Father: {fileID: 781145593}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -390}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845948236
 MonoBehaviour:
@@ -5286,7 +5312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pork
+  m_text: Egg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5584,7 +5610,7 @@ GameObject:
   - component: {fileID: 2090739406}
   - component: {fileID: 2090739407}
   m_Layer: 5
-  m_Name: ChickenButton
+  m_Name: FishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5606,10 +5632,10 @@ RectTransform:
   m_Father: {fileID: 781145593}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -230}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090739407
 MonoBehaviour:

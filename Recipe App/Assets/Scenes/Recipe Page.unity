@@ -1543,6 +1543,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackButton
       objectReference: {fileID: 0}
+    - target: {fileID: 188018885638509383, guid: 622a5036d476f534396f8156dc73a7ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684726368912923776, guid: 622a5036d476f534396f8156dc73a7ac, type: 3}
+      propertyPath: desiredScene
+      value: Recipe Page
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622a5036d476f534396f8156dc73a7ac, type: 3}
 --- !u!224 &725602210 stripped
