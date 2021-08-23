@@ -16,7 +16,7 @@ public class RecipeDropdownController : SearchableDropdownController<Recipe>
     protected override void UpdateOptions(string text)
     {
         Dictionary<string, string> param = new Dictionary<string, string>();
-        param.Add("recipeName", text);        
+        param.Add("recipeName", text);
 
         completeOptionsList = ApiCommunicator.MakeRequest<Recipe[]>("recipeSearch", param).ToList();
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
+using System;
 
 public class RecipeDropdownItem : CustomDropdownItem<Recipe>
 {
@@ -22,7 +23,7 @@ public class RecipeDropdownItem : CustomDropdownItem<Recipe>
 
     void Awake()
     {
-        
+        GetComponent<SearchableToggle>().onClicked += OnClicked;
     } 
 
     public override void Populate(Recipe data)
@@ -44,5 +45,10 @@ public class RecipeDropdownItem : CustomDropdownItem<Recipe>
         yield return request.SendWebRequest();
         Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
         image.texture = texture;
+    }
+
+    private void OnClicked()
+    {
+        ItemClicked?.Invoke(this);
     }
 }
