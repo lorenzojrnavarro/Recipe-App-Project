@@ -8,7 +8,8 @@ using System.Text;
 
 public class ColumnListItem : MonoBehaviour
 {
-    public Action<ColumnListItem> OnDeleteButtonClicked;
+    public delegate int DeleteItem(ColumnListItem item);
+    public DeleteItem OnDeleteButtonClicked;
     private TextMeshProUGUI[] columnTexts;
 
     private void Awake()

@@ -21,21 +21,36 @@ public class ItemListController : MonoBehaviour
         addListItem.OnAddButtonClicked += AddButtonClicked;
     }
 
-    private void AddButtonClicked(string[] columns)
+    protected void AddItem(string[] columns)
     {
         GameObject listItemGO = Instantiate(listItemPrefab, contentTransform);
         ColumnListItem listItem = listItemGO.GetComponent<ColumnListItem>();
         listItem.OnDeleteButtonClicked += DeleteButtonClicked;
         listItem.Populate(columns);
 
-        addListItem.transform.SetAsLastSibling();
         listItems.Add(listItem);
     }
 
-    protected virtual void DeleteButtonClicked(ColumnListItem listItem)
+    protected void AddItem(string column)
     {
+        AddItem(new string[] { column });
+    }
+
+
+    protected virtual void AddButtonClicked(string[] columns)
+    {
+        AddItem(columns);
+        addListItem.transform.SetAsLastSibling();
+    }
+
+    protected virtual int DeleteButtonClicked(ColumnListItem listItem)
+    {
+        int itemIndex = listItems.IndexOf(listItem);
+
         listItems.Remove(listItem);
         Destroy(listItem.gameObject);
+
+        return itemIndex;
     }
 
     public List<string> GetValues()
