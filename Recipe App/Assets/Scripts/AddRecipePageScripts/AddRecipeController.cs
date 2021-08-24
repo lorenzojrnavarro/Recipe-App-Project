@@ -21,7 +21,7 @@ public class AddRecipeController : MonoBehaviour
     private ItemListController recipeIngredients;
 
     [SerializeField]
-    private ItemListController recipeAllergens;
+    private GameObject recipeAllergenContents;
 
     [SerializeField]
     private ItemListController recipeProcedure;
@@ -30,10 +30,11 @@ public class AddRecipeController : MonoBehaviour
     private TMP_InputField recipeCalories;
 
     private string imageFilePath;
+    private Toggle[] recipeAllergens;
 
     private void Awake()
     {
-
+        recipeAllergens = recipeAllergenContents.GetComponentsInChildren<Toggle>();
     }
 
     public void SelectPhotoToUpload()
@@ -59,6 +60,21 @@ public class AddRecipeController : MonoBehaviour
         image.texture = texture;
     }
 
+    private List<int> GetAllergenList()
+    {
+        List<int> allergenIds = new List<int>();
+        for (int i = 0; i < recipeAllergens.Length; i++)
+        {
+            if(recipeAllergens[i].isOn)
+            {
+                int allergenId = recipeAllergens[i].GetComponent<AllergenIDs>().allergenID;
+                allergenIds.Add(allergenId);
+            }
+        }
+
+        return allergenIds;
+    }
+
     public void AcceptButtonClicked()
     {
         byte[] bytes = File.ReadAllBytes(imageFilePath);
@@ -67,7 +83,7 @@ public class AddRecipeController : MonoBehaviour
         param.Add("recipeName", recipeName.text);
         param.Add("recipeImageBytes", Convert.ToBase64String(bytes));
         param.Add("recipeIngredients", string.Join("@", recipeIngredients.GetValues()));
-        param.Add("recipeAllergens", string.Join(",", recipeAllergens.GetValues()).Replace("&", ""));
+        param.Add("recipeAllergens", string.Join<int>(",", GetAllergenList()));
         param.Add("recipeProcedure", string.Join("<br><br>", recipeProcedure.GetValues()).Replace("&", ""));
         param.Add("recipeCalories", recipeCalories.text);
 
