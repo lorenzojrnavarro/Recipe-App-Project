@@ -39,6 +39,7 @@ public class AddRecipeController : MonoBehaviour
 
     public void SelectPhotoToUpload()
     {
+        //FileBrowser.BrowseImage(OnImagePathChosen);
         FileBrowser.BrowseImage(OnImagePathChosen);
     }
 
